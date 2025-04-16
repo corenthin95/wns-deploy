@@ -5,7 +5,7 @@ services:
   server:
     # build: ./server
     # To replace with the correct path of your server image
-    image: corenthin95/wns-deploy-server
+    image: corenthin95/image-server
     command: sh -c "npm run build && npm run prod"
     expose:
       - 5000
@@ -17,7 +17,7 @@ services:
   client:
     # build: ./client
     # To replace with the correct path of your client image
-    image: corenthin95/wns-deploy-client
+    image: corenthin95/image-client
     command: sh -c "npm run build"
     volumes:
       - web-client-build:/app/build
